@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Education</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <title>Education</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="p-6 bg-white text-gray-800">
-    <%- include('partials/navbar') %>
-    <h1 class="text-3xl font-bold mb-6">My Education</h1>
+<body class="bg-[#BFCFBB] text-gray-800">
+  <%- include('partials/navbar') %>
 
-    <div class="space-y-4">
-        <div class="border rounded-xl p-4 shadow">
-            <h2 class="text-xl font-semibold">Arkansas Tech University</h2>
-            <p>Associate Degree in Business Administration (May 2022)</p>
-        </div>
-        <div class="border rounded-xl p-4 shadow">
-            <h2 class="text-xl font-semibold">Arkansas Tech University</h2>
-            <p>Bachelor of Science in Information Technology (Expected Fall 2025)</p>
-        </div>
-    </div>
+<main class="max-w-5xl mx-auto p-8">
+  <h1 class="text-4xl font-bold text-[#344C3D] mb-6 border-b-2 pb-2">Education</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <% education.forEach(ed => { %>
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <h2 class="text-xl font-bold text-[#344C3D]"><%= ed.degree %></h2>
+        <p class="text-sm text-gray-700 mt-2"><%= ed.institution %></p>
+        <p class="text-sm text-gray-600"><%= ed.year %></p>
+        <p class="text-sm text-gray-600"><%= ed.description %></p>
+      </div>
+    <% }) %>
+  </div>
+</main>
+
 </body>
 </html>

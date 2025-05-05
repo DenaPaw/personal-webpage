@@ -4,11 +4,72 @@
     <meta charset="UTF-8">
     <title>Welcome</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body> 
-    <%- include('partials/navbar') %>
 
-    <h1 class="text-3xl font-bold text-blue-600">Welcome to My Professional Page</h1>
-    <p>This is the homepage.</p>
-</body>
+<body class="bg-[#BFCFBB] dark:bg-dark text-gray-800 dark:text-cream">
+    <%- include('partials/navbar') %>
+  
+    <main class="max-w-7xl mx-auto p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <aside class="bg-white rounded-2xl shadow-lg p-6 text-center col-span-1">
+        <img src="/images/IMG_8.png" alt="Dena Paw" class="mx-auto h-36 w-36 object-cover rounded-full border-4 border-[#738A6E]" />
+        <h2 class="mt-4 text-2xl font-bold">Dena Paw</h2>
+        <p class="text-sm text-gray-600">IT Student · Arkansas Tech University</p>
+            <a href="mailto:Nawde143@outlook.com" class="text-[#EA4335] hover:text-[#BFCFBB]">
+             <i class="fas fa-envelope text-xl"></i>
+            </a>
+            <a href="https://github.com/DenaPaw" class="text-[#181717] hover:text-[#BFCFBB]">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="https://linkedin.com/in/dena-paw-a924a6296" class="text-[#0077B5] hover:text-[#BFCFBB]">
+            <i class="fab fa-linkedin text-xl"></i>
+          </a>
+        </div>         
+  
+        <div class="mt-6 text-left space-y-2 text-sm">
+          <p><strong>Phone:</strong> (479) 979-7066</p>
+          <p><strong>Email:</strong> Nawde143@outlook.com</p>
+          <p><strong>Location:</strong> Clarksville, Arkansas</p>
+        </div>
+
+        <a href="/Resume.pdf" class="inline-block mt-6 bg-[#344C3D] text-white px-4 py-2 rounded-lg hover:bg-[#738A6E]">Download Resume</a>
+      </aside>
+
+      <section class="col-span-2 bg-white rounded-2xl shadow-lg p-6">
+        <h1 class="text-3xl font-bold border-b-2 border-[#344C3D] inline-block pb-1">ABOUT ME</h1>
+        <p class="mt-4 leading-relaxed text-gray-700">
+          Hello! My name is Dena Paw, currently pursuing my Bachelor's degree in Information Technology at Arkansas Tech University. 
+          I am passionate about learning, community involvement, and solving real-world problems through tech and HR skills.
+        </p>
+  
+        <h2 class="mt-8 text-2xl font-semibold">What I Do!</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          <div class="bg-[#8EA58C] p-4 rounded-lg text-white">
+            <h3 class="font-bold text-lg">Tech & Programming</h3>
+            <p class="text-sm">From mobile app development like MeetATU to scripting database backups, I love building tech that helps others.</p>
+          </div>
+          <div class="bg-[#BFCFBB] p-4 rounded-lg">
+            <h3 class="font-bold text-gray-900 text-lg">Human Resource Interest</h3>
+            <p class="text-sm text-gray-700">As an aspiring HR intern, I bring tech knowledge, empathy, and strong communication to support employees and systems.</p>
+          </div>
+          <div class="bg-[#344C3D] p-4 rounded-lg text-white">
+            <h3 class="font-bold text-lg">Volunteering</h3>
+            <p class="text-sm">From elder care to state clean-up projects, I love giving back through hands-on work and community impact.</p>
+          </div>
+          <div class="bg-[#738A6E] p-4 rounded-lg text-white">
+            <h3 class="font-bold text-lg">Creative Projects</h3>
+            <p class="text-sm">Building presentations and portfolios that tell stories  like Oracle DB backups or student apps like MeetATU.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/js/theme.js"></script>
+  </body>
+  
+  
+    <footer class="mt-10 text-sm text-gray-600 text-center">© 2025 Dena Paw. All rights reserved.
+  
 </html>
+
+
+

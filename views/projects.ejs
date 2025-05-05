@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Projects</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <title>Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body class="p-6 bg-gray-100">
-    <%- include('partials/navbar') %>
-    <h1 class="text-3xl font-bold mb-6 text-gray-800">My Projects</h1>
+<body class="bg-[#BFCFBB] text-gray-800">
+  <%- include('partials/navbar') %>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="bg-white rounded-xl shadow p-4">
-            <h2 class="text-xl font-semibold">MeetATU</h2>
-            <p class="text-gray-600">A mobile app that helps students connect through shared classes.</p>
-            <p class="text-sm text-gray-500 mt-2">Tech Used: Firebase, Flutter</p>
+  <main class="max-w-6xl mx-auto p-8">
+    <h1 class="text-4xl font-bold text-[#344C3D] mb-6 border-b-2 pb-2">Projects</h1>
+  
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <% projects.forEach(project => { %>
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <div class="flex items-center mb-3">
+            <h2 class="text-xl font-semibold text-[#344C3D]"><%= project.title %></h2>
+          </div>
+          <p class="text-gray-700 mb-2"><%= project.description %></p>
+          <p class="text-sm text-gray-600">Technologies: <%= project.technologies %></p>
+          <% if (project.github) { %>
+            <a href="<%= project.github %>" target="_blank" class="text-blue-700 hover:underline text-sm"> GitHub</a>
+          <% } %>
+          <% if (project.demo) { %>
+            <a href="<%= project.demo %>" target="_blank" class="text-blue-700 hover:underline text-sm ml-4">📎 Demo</a>
+          <% } %>
         </div>
-        <!-- Add 4 more cards like this -->
+      <% }) %>
     </div>
+  </main>
+  
 </body>
 </html>
